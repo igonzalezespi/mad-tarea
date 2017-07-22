@@ -1,0 +1,21 @@
+.interruptor.base {
+  position: fixed;
+  top: 0;
+}
+
+.separador {
+  height: 90vh;
+  position:fixed;
+  top: 0;
+  left: 500px;
+}
+
+.interruptor.base.rojo {
+left: 0;
+}
+.interruptor.base.amarillo {
+left:100px;
+}
+.interruptor.base.verde {
+left:200px;
+}

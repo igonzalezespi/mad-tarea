@@ -1,15 +1,17 @@
 <html ng-app="app">
 <script type="text/javascript" src="lib/angular.js"></script>
 <script type="text/javascript" src="logica.js"></script>
+<link rel="stylesheet" href="estilos.css"></script>
 
 <body ng-controller="main">
   <div>
-    <img src="img/rojo-off.png" ng-hide="encendido.rojo" ng-click="encendido.rojo = true;" />
-    <img src="img/rojo-on.png" ng-show="encendido.rojo" ng-click="encendido.rojo = false;" />
-    <img src="img/amarillo-off.png" ng-hide="encendido.amarillo" ng-click="encendido.amarillo = true;" />
-    <img src="img/amarillo-on.png" ng-show="encendido.amarillo" ng-click="encendido.amarillo = false;" />
-    <img src="img/verde-off.png" ng-hide="encendido.verde" ng-click="encendido.verde = true;" />
-    <img src="img/verde-on.png" ng-show="encendido.verde" ng-click="encendido.verde = false;" />
+    <img src="img/rojo-off.png" class="interruptor base rojo" ng-hide="encendido.rojo" ng-click="encendido.rojo = true;" />
+    <img src="img/rojo-on.png" class="interruptor base rojo" ng-show="encendido.rojo" ng-click="encendido.rojo = false;" />
+    <img src="img/amarillo-off.png" class="interruptor base amarillo" ng-hide="encendido.amarillo" ng-click="encendido.amarillo = true;" />
+    <img src="img/amarillo-on.png" class="interruptor base amarillo" ng-show="encendido.amarillo" ng-click="encendido.amarillo = false;" />
+    <img src="img/verde-off.png" class="interruptor base verde" ng-hide="encendido.verde" ng-click="encendido.verde = true;" />
+    <img src="img/verde-on.png" class="interruptor base verde" ng-show="encendido.verde" ng-click="encendido.verde = false;" />
+    <img src="img/separador.jpg" class="separador" />
   </div>
 </body>
 
