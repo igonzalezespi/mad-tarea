@@ -1,0 +1,16 @@
+<html ng-app="app">
+<script type="text/javascript" src="lib/angular.js"></script>
+<script type="text/javascript" src="logica.js"></script>
+
+<body ng-controller="main">
+  <div>
+    <img src="img/rojo-off.png" ng-hide="encendido.rojo" ng-click="encendido.rojo = true;" />
+    <img src="img/rojo-on.png" ng-show="encendido.rojo" ng-click="encendido.rojo = false;" />
+    <img src="img/amarillo-off.png" ng-hide="encendido.amarillo" ng-click="encendido.amarillo = true;" />
+    <img src="img/amarillo-on.png" ng-show="encendido.amarillo" ng-click="encendido.amarillo = false;" />
+    <img src="img/verde-off.png" ng-hide="encendido.verde" ng-click="encendido.verde = true;" />
+    <img src="img/verde-on.png" ng-show="encendido.verde" ng-click="encendido.verde = false;" />
+  </div>
+</body>
+
+</html>
