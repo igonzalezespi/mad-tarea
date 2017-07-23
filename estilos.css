@@ -1,21 +1,14 @@
-.interruptor.base {
-  position: fixed;
-  top: 0;
+.base, .bruto {
+  display: inline-block;
 }
 
-.separador {
-  height: 90vh;
-  position:fixed;
-  top: 0;
-  left: 500px;
+separador img {
+  height: 95%;
+  margin: 0 50px;
 }
 
-.interruptor.base.rojo {
-left: 0;
-}
-.interruptor.base.amarillo {
-left:100px;
-}
-.interruptor.base.verde {
-left:200px;
+button.adivina {
+  font-size: 15px;
+  padding: 5px;
+  margin: 10px;
 }

@@ -1,17 +1,51 @@
 <html ng-app="app">
-<script type="text/javascript" src="lib/angular.js"></script>
-<script type="text/javascript" src="logica.js"></script>
-<link rel="stylesheet" href="estilos.css"></script>
+<script type="text/javascript"
+        src="lib/angular.js"></script>
+<script type="text/javascript"
+        src="module.js"></script>
+<script type="text/javascript"
+        src="interruptor.component.js"></script>
+<script type="text/javascript"
+        src="separador.component.js"></script>
+<script type="text/javascript"
+        src="main.js"></script>
+<link rel="stylesheet"
+      type="text/css"
+      href="estilos.css">
 
-<body ng-controller="main">
-  <div>
-    <img src="img/rojo-off.png" class="interruptor base rojo" ng-hide="encendido.rojo" ng-click="encendido.rojo = true;" />
-    <img src="img/rojo-on.png" class="interruptor base rojo" ng-show="encendido.rojo" ng-click="encendido.rojo = false;" />
-    <img src="img/amarillo-off.png" class="interruptor base amarillo" ng-hide="encendido.amarillo" ng-click="encendido.amarillo = true;" />
-    <img src="img/amarillo-on.png" class="interruptor base amarillo" ng-show="encendido.amarillo" ng-click="encendido.amarillo = false;" />
-    <img src="img/verde-off.png" class="interruptor base verde" ng-hide="encendido.verde" ng-click="encendido.verde = true;" />
-    <img src="img/verde-on.png" class="interruptor base verde" ng-show="encendido.verde" ng-click="encendido.verde = false;" />
-    <img src="img/separador.jpg" class="separador" />
+<body ng-controller="main as $main">
+  <div class="base">
+    <p>
+      Aprete interruptores,
+      <br/>el programa adivinará su combinación
+      <br/> y la pondrá en el otro lado
+    </p>
+    <div ng-repeat="caja in $main.base track by $index">
+      <interruptor color="rojo"
+                   encendido="caja.rojo"
+                   on-toggle="$main.toggle(caja, 'rojo')"></interruptor>
+      <interruptor color="amarillo"
+                   encendido="caja.amarillo"
+                   on-toggle="$main.toggle(caja, 'amarillo')"></interruptor>
+      <interruptor color="verde"
+                   encendido="caja.verde"
+                   on-toggle="$main.toggle(caja, 'verde')"></interruptor>
+    </div>
+  </div>
+  <separador></separador>
+  <div class="bruto">
+    <button class="adivina"
+            ng-click="adivina()">
+      ¡Adivina!
+    </button>
+    <div ng-repeat="caja in $main.bruto track by $index">
+      <interruptor color="rojo"
+                   encendido="caja.rojo"></interruptor>
+      <interruptor color="amarillo"
+                   encendido="caja.amarillo"></interruptor>
+      <interruptor color="verde"
+                   encendido="caja.verde"></interruptor>
+    </div>
   </div>
 </body>
 
