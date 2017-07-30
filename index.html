@@ -9,6 +9,7 @@
         src="separador.component.js"></script>
 <script type="text/javascript"
         src="main.js"></script>
+
 <link rel="stylesheet"
       type="text/css"
       href="estilos.css">
@@ -22,29 +23,29 @@
     </p>
     <div ng-repeat="caja in $main.base track by $index">
       <interruptor color="rojo"
-                   encendido="caja.rojo"
-                   on-toggle="$main.toggle(caja, 'rojo')"></interruptor>
+                   encendido="caja[0]"
+                   on-toggle="$main.toggle(caja, 0)"></interruptor>
       <interruptor color="amarillo"
-                   encendido="caja.amarillo"
-                   on-toggle="$main.toggle(caja, 'amarillo')"></interruptor>
+                   encendido="caja[1]"
+                   on-toggle="$main.toggle(caja, 1)"></interruptor>
       <interruptor color="verde"
-                   encendido="caja.verde"
-                   on-toggle="$main.toggle(caja, 'verde')"></interruptor>
+                   encendido="caja[2]"
+                   on-toggle="$main.toggle(caja, 2)"></interruptor>
     </div>
   </div>
   <separador></separador>
   <div class="bruto">
     <button class="adivina"
-            ng-click="adivina()">
+            ng-click="$main.adivina()">
       ¡Adivina!
     </button>
     <div ng-repeat="caja in $main.bruto track by $index">
       <interruptor color="rojo"
-                   encendido="caja.rojo"></interruptor>
+                   encendido="caja[0]"></interruptor>
       <interruptor color="amarillo"
-                   encendido="caja.amarillo"></interruptor>
+                   encendido="caja[1]"></interruptor>
       <interruptor color="verde"
-                   encendido="caja.verde"></interruptor>
+                   encendido="caja[2]"></interruptor>
     </div>
   </div>
 </body>
